@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+
+echo ==== Deleting previous data in analysis folder ====
+cd data-analysis
+
+	rm -f *.eps
+	rm -f *.txt
+	rm -f *.dat
+
+cd ..
+
+echo ==== Deleting previous code ==== 
+rm -f code
+
+echo ==== Compiling the code ====
+g++ --std=c++11  *.cpp -o code -llapack -lblas
+
+echo ==== Running the code ====
+./code
+
+
+echo ==== Data analysis folder ====
+cd data-analysis
+
+	gnuplot act.p
+        gnuplot acc.p
+        gnuplot energy.p
+        gnuplot extent.p
+        bash run_main
+
+cd ..
+
+
+wait 
+
+echo Done
