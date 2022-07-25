@@ -9,3 +9,8 @@ Comments:
 
 Some results generated using this code:
 
+<img src="data-analysis//energy_extent_1.png" width="600">
+
+Compile and run the code using bash script provided in the folder.
+
+If you have any comments/suggestions/query do write to me => navdeep.s.dhindsa@gmail.com 
