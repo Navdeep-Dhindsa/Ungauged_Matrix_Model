@@ -27,7 +27,6 @@ cd data-analysis
         gnuplot acc.p
         gnuplot energy.p
         gnuplot extent.p
-        bash run_main
 
 cd ..
 
